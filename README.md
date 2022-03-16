@@ -159,32 +159,7 @@ The following figure shows the system configuration setting in MCC tool.
 </p>
 
 
-## Timer 2 Configuration
-
-Configure Timer2 in HLT mode for switch debouncing functionality with the following configuration.
-
-*	Enable Timer checkbox
-*	Control Mode – Monostable
-*	Ext Reset – T2INPPS
-* 	Start/Reset Option – Start on rising edge on TMR2_ers
-*	Clock Source – MFINTOSC 31.25kHz
-*	Polarity – Rising Edge
-*	Prescaler – 1:16, Postscaler – 1:1
-*	Time Period – 100ms
-*	Enable Timer Interrupt checkbox
-
-<p align="center">
-  <img width=auto height=auto src="images/timer.png">
-</p>
-
-
 ## MSSP Configuration
-
-The below image explains about the host mssp configuration details in the project.
-
-<p align="center">
-  <img width=auto height=auto src="images/mssp.png">
-</p>
 
 The below image explains about the client mssp configuration details in the project.
 
@@ -196,13 +171,7 @@ The below image explains about the client mssp configuration details in the proj
 
 The following images informs about the pin usage in the project.
 
-1. Host Device:
-
-<p align="center">
-  <img width=auto height=auto src="images/host-pin-configuration.png">
-</p>
-
-2. Client Device:
+1. Client Device:
 
 <p align="center">
   <img width=auto height=auto src="images/client-pin-configuration.png">
