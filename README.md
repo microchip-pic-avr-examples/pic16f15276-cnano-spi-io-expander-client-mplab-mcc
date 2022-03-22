@@ -4,23 +4,9 @@
 
 # Client SPI I/O Expander using PIC16F15276 microcontroller
 
-This code example demonstrates usage of PIC16F15276 microcontroller as a I/O expander in embedded applications, where the PIC16F15276 microcontroller provides additional I/O pins to the main microcontroller through serial communication interface like I2C or SPI or UART. In this code example, use of Master Synchronous Serial Port(MSSP) peripheral and GPIOs to realize SPI I/O expander is demonstrated.
+This code example highlights usage of PIC MCU as I/O expander, where the PIC16F15276 MCU acts as client and used as an I/O expander by host, and communicates through SPI interface. Compatible PIC16F152xx family of MCUs are:PIC16F15244,PIC16F15254,PIC16F15276.
 
-This example highlights usage of PIC MCU as I/O expander, where the PIC16F15276 MCU acts as client and used as an I/O expander by host, and communicates through SPI interface. Compatible PIC16F152xx family of MCUs are:PIC16F15244,PIC16F15254,PIC16F15276
-
-Refer code example Host SPI I/O Expander using PIC16F15276 microcontroller for more details bout the host device implementation.
-
-## Introduction
-
-The PIC16F15276 microcontroller is available in 40 pin packages for various embedded applications. The PIC16F15276 family’s simplified feature set includes Peripheral Pin Select (PPS), digital communication peripherals, timers, Enhanced Universal Synchronous Asynchronous Receiver Transmitter (EUSART), Master Synchronous Serial Port(MSSP). This code example demonstrates implementation of I/O Expander using MSSP(SPI mode) peripheral and I/O pins of the PIC16F15276 microcontroller.
-
-The Serial Peripheral Interface (SPI) is a synchronous serial data communication bus that operates in Full-Duplex mode. Devices communicate in a host/client environment where the host device initiates the communication. A client device is selected for communication using the Client Select feature. The SPI bus specifies four signal connections:
-1.	Serial Clock (SCK)
-2.	Serial Data Out (SDO)
-3. 	Serial Data In (SDI)
-4.	Client Select (SS)
-
-The SPI bus operates with a single host device and one or more client devices. When multiple client devices are used, an independent Client Select connection is required from the host device to each client device. The host selects only one client at a time. Most client devices have tri-state outputs, so their output signal appears disconnected from the bus when they are not selected.
+Refer code example [Host SPI I/O Expander using PIC16F15276 microcontroller](https://github.com/microchip-pic-avr-examples/pic16f15276-cnano-spi-io-expander-host-mplab-mcc) for more details bout the host device implementation.
 
 ## Related Documentation
 
@@ -30,33 +16,6 @@ The SPI bus operates with a single host device and one or more client devices. W
 - [PIC16F15244 MCU Product Page](https://www.microchip.com/en-us/product/PIC16F15244)
 - [GitHub Microchip PIC Example : Client SPI I/O Expander using PIC16F15276 microcontroller]()
 - [GitHub Microchip PIC Example : UART I/O Expander using PIC16F15276 microcontroller]()
-
-## Description
-
-The Master Synchronous Serial Port (MSSP) module is a serial interface useful for communicating with other peripheral or microcontroller devices. These peripheral devices may be serial EEPROMs, Shift registers, display drivers, A/D converters, etc.
-
-The MSSP module can operate in one of two modes:
-*	Serial Peripheral Interface (SPI)
-* 	Inter-Integrated Circuit (I2C)
-
-The SPI interface can operate in Master or Slave mode and supports the following features:
-* 	Selectable Clock Parity
-* 	Slave Select Synchronization (Slave Mode Only)
-* 	Daisy-Chain Connection of Slave Device
-
-For the ease of demonstration, this code example uses PIC16F15276 microcontroller as host microcontroller and another PIC16F15276 microcontroller as client microcontroller. Also, the code example uses PIC16F15276 Curiosity nano development boards for the demonstration.
-
-On host device, on-board switch of the PIC16F15276 Curiosity Nano board is used as a trigger to the host device to transfer command to the client device through SPI interface. The on-board LED is used to notify the user about successful switch press event detection and subsequent SPI command transmission by the host. After receiving the command from host, client device drives the respective I/O pins connected to the SSD in a pre-defined sequence, to display numbers from 0 to 3 in the ascending order.
-
-<p align="center">
-  <img width=auto height=auto src="images/blockdiagram.png">
-  <br>Figure 1 : Block diagram view of the application<br>
-</p>
-
-*	In this example, PIC16F15276 CNANO boards, PROTO Xplained Pro extension kit with SSD circuitry populated over it and few connecting jumper cables are used for demonstrating SPI I/O Expander.
-*	The on-board switch of host device is used to initiate the communication between the host and client devices over SPI interface. The HLT mode of timer-2 module is used for switch debounce implementation.
-*	The client receives the command from the host device over SPI interface.
-* The client microcontroller verifies the commands upon reception, if it matches then initiates the number display from 0 to 3 on SSD. It is followed up with SSD value resetting to zero.
 
 ## Seven Segment Display (SSD)
 
@@ -119,13 +78,9 @@ Note : 330 or 470 ohms resistor will be used.
 - PIC16F15276 Curiosity Nano Evaluation Kit [EV35F40A](https://www.microchip.com/en-us/development-tool/EV35F40A)
 - PROTO1 XPLAINED PRO EXTENSION KIT [ATPROTO1-XPRO](https://www.microchip.com/en-us/development-tool/ATPROTO1-XPRO)
 
-## Application Firmware
+## Demo Operation
 
-This example is supplemented with two standalone firmware named as host firmware, client firmware.
-
-The host firmware uses MSSP(SPI mode) peripheral for communication with client. Upon detection of a valid switch press event, the host sends a command to the client over SPI interface. Also, the host blinks on-board LED each time a command is successfully sent to the client.
-
-The client firmware is comprised of two sections. First section is verifying the command received from the host through SPI interface. The second section consists of driving SSD, so the SSD start displaying digits from 0 to 3 in an incrementing order each time a valid command is received from the host. Additionally, the client firmware toggles on-board LED each time after a digit is displayed on the SSD and resets display value to zero when the cycle is completed.
+Refer GitHub code example [Host SPI I/O Expander using PIC16F15276 microcontroller](https://github.com/microchip-pic-avr-examples/pic16f15276-cnano-spi-io-expander-host-mplab-mcc) for more detials about the demo operation.
 
 ## Appendix
 
@@ -177,29 +132,5 @@ The following images informs about the pin usage in the project.
   <img width=auto height=auto src="images/client-pin-configuration.png">
 </p>
 
-## Hardware Setup
-
-The following figure consists of populated PROTO Xplained Pro extension kit, Curiosity Nano Adapter Board and PIC16F15276 Curiosity Nano Evaluation Kit (host and client devices). The figure shows the detailed information about the hardware setup. The populated PROTO Xplained Pro extension kit is interfaced with PIC16F15276 MCU using extension header of the curiosity nano adapter board.
-
-<p align="center">
-  <img width=auto height=auto src="images/">
-</p>
-
-## Operation
-
-*	Make the hardware connections as shown in the Hardware Setup. Power up the Curiosity Nano board using micro-USB cable.
-
-*	Download the firmware available from the GitHub code example page.
-
-*	Build the project using latest version of tools as mentioned in the Software Tools section and flash the generated file on the PIC16F15276 MCU.
-
-*	On host-side, onboard switch press event is performed to transmit the command to the client through SPI interface.
-
-*	On host-side, onboard LED is used as an indicator for the switch press event and indicates command is sent to the client.
-
-*	On client-side, after receiving the command from the host, client device verifies the command and drives the 7 segment LED display to display numbers from 0 to 3. On-board LED of CNANO board toggles for every number display.
 
 
-## Conclusions
-
-In many real-world embedded applications, the microcontroller requires to interface with multi-pin standalone IC modules and display units to perform various functionalities. So, the developers have a challenge in effectively using microcontrollers I/O pins for interfacing the external modules without opting an expensive, higher pin and memory variant. This code example demonstrates how cost effective and entry level PIC16F15726 microcontroller can be used as I/O expander using SPI interface
