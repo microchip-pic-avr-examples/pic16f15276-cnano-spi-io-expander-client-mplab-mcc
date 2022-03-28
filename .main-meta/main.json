@@ -4,8 +4,8 @@
     "content": {
         "metaDataVersion": "1.3.0",
         "name": "com.microchip.mcu8.mplabx.project.pic16f15276-cnano-spi-io-expander-client-mplab-mcc",
-        "version": " ",
-        "displayName": "",
+        "version": "1.0.0",
+        "displayName": "SPI I/O Expander using PIC16F15276 microcontroller",
         "projectName": "pic16f15276-cnano-spi-io-expander-client-mplab-mcc",
         "shortDescription": "This example highlights usage of PIC MCU as I O expander where the PIC16F15276 MCU acts as client and used as an I O expander by host and communicates through SPI interface Compatible PIC16F152xx family of MCUs are PIC16F15244 PIC16F15254 PIC16F15276",
         "ide": {
@@ -19,12 +19,12 @@
             }
         ],
         "dfp": {
-            "name": "",
-            "semverRange": ""
+            "name": "PIC16f1xxxx_DFP",
+            "semverRange": "^1.13.178"
         },
         "configurator": {
-            "name": "",
-            "semverRange": ""
+            "name": "MCC",
+            "semverRange": "^5.1.1"
         },
         "device": {
             "metaDataVersion": "1.0.0",
@@ -37,8 +37,8 @@
             }
         },
         "author": "Usha G",
-        "peripherals": [],
-        "keywords": [],
+        "peripherals": ["MSSP","TMR2"],
+        "keywords": ["Melody","Curiosity Nano","Hardware Limit Timer","8/16-bit Timer"],
         "additionalData": {
             "longDescription": {
                 "metaDataVersion": "1.0.0",
