@@ -2,11 +2,23 @@
 
 [![MCHP](images/microchip.png)](https://www.microchip.com)
 
-# Client SPI I/O Expander using PIC16F15276 microcontroller
+# SPI I/O Expander using PIC16F15276 microcontroller
 
-This code example highlights usage of PIC MCU as I/O expander, where the PIC16F15276 MCU acts as client and used as an I/O expander by host, and communicates through SPI interface. Compatible PIC16F152xx family of MCUs are:PIC16F15244,PIC16F15254,PIC16F15276.
+This code example demonstrates usage of PIC16F15276 microcontroller as a I/O expander in embedded applications, where the PIC16F15276 microcontroller provides additional I/O pins to the main microcontroller through serial communication interface like I2C or SPI or UART. In this code example, PIC16F15276 MCU acts as client and used as an I/O expander by host, and communicates through SPI interface. 
 
-Refer code example [Host SPI I/O Expander using PIC16F15276 microcontroller](https://github.com/microchip-pic-avr-examples/pic16f15276-cnano-spi-io-expander-host-mplab-mcc) for more details bout the host device implementation.
+Refer code example [SPI I/O Expander: Host Implementation using PIC16F15276 microcontroller](https://github.com/microchip-pic-avr-examples/pic16f15276-cnano-spi-io-expander-host-mplab-mcc) for more details bout the host device implementation.
+
+## Introduction
+
+The PIC16F15276 microcontroller is available in 40 pin packages for various embedded applications. The PIC16F15276 family’s simplified feature set includes Peripheral Pin Select (PPS), digital communication peripherals, timers, Enhanced Universal Synchronous Asynchronous Receiver Transmitter (EUSART), Master Synchronous Serial Port(MSSP). This code example demonstrates implementation of I/O Expander using MSSP(SPI mode) peripheral and I/O pins of the PIC16F15276 microcontroller.
+
+The Serial Peripheral Interface (SPI) is a synchronous serial data communication bus that operates in Full-Duplex mode. Devices communicate in a host/client environment where the host device initiates the communication. A client device is selected for communication using the Client Select feature. The SPI bus specifies four signal connections:
+
+Serial Clock (SCK)
+Serial Data Out (SDO)
+Serial Data In (SDI)
+Client Select (SS)
+The SPI bus operates with a single host device and one or more client devices. When multiple client devices are used, an independent Client Select connection is required from the host device to each client device. The host selects only one client at a time. Most client devices have tri-state outputs, so their output signal appears disconnected from the bus when they are not selected.
 
 ## Related Documentation
 
@@ -14,8 +26,8 @@ Refer code example [Host SPI I/O Expander using PIC16F15276 microcontroller](htt
 - [PIC16F15244 Code Examples on GitHub](https://github.com/microchip-pic-avr-examples?q=pic16f15244&type=&language=&sort=) 
 - [PIC16F15244 MCU Family Video](https://www.youtube.com/watch?v=nHLv3Th-o-s)
 - [PIC16F15244 MCU Product Page](https://www.microchip.com/en-us/product/PIC16F15244)
-- [GitHub Microchip PIC Example : Client SPI I/O Expander using PIC16F15276 microcontroller]()
-- [GitHub Microchip PIC Example : UART I/O Expander using PIC16F15276 microcontroller]()
+- [GitHub Microchip PIC Example : SPI I/O Expander: Host Implementation using PIC16F15276 microcontroller](https://github.com/microchip-pic-avr-examples/pic16f15276-cnano-spi-io-expander-host-mplab-mcc)
+- [GitHub Microchip PIC Example : UART I/O Expander Host using PIC16F15276 microcontroller](https://github.com/microchip-pic-avr-examples/pic16f15276-cnano-uart-io-expander-host-mplab-mcc)
 
 ## Seven Segment Display (SSD)
 
@@ -102,7 +114,7 @@ MCC – MPLAB® Code Configurator is a graphical programming environment that ge
 Open "Clock Control" setup present under "System" dropdown menu in "Project Resources" tab. Host and the client device will be configured with same configuration as given below.
 
 *	Set "Clock Source" as "HFINTOSC"
-*	Set "HF Internal Clock" as "8_MHz"
+*	Set "HF Internal Clock" as "16_MHz"
 *	Enable low power programming checkbox
 
 The system configuration window of MCC is used for MCU oscillator, Watchdog timer and low voltage programming configuration. The Watchdog timer is disabled in the application.
@@ -110,7 +122,7 @@ The system configuration window of MCC is used for MCU oscillator, Watchdog time
 The following figure shows the system configuration setting in MCC tool.
 
 <p align="center">
-  <img width=auto height=auto src="images/clock.png">
+  <img width=auto height=auto src="images/SystemClock.png">
 </p>
 
 
