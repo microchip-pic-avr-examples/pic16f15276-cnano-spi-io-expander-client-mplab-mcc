@@ -38,7 +38,7 @@
         },
         "author": "Usha G",
         "peripherals": ["MSSP","TMR2"],
-        "keywords": ["Melody","Curiosity Nano","Hardware Limit Timer","8/16-bit Timer"],
+        "keywords": ["Melody","Curiosity Nano","HLT","8/16-bit Timer"],
         "additionalData": {
             "longDescription": {
                 "metaDataVersion": "1.0.0",
