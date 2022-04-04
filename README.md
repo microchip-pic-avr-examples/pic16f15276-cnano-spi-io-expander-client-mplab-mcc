@@ -25,7 +25,7 @@ The SPI bus operates with a single host device and one or more client devices. W
 - [PIC16F152xx Product Family Page](https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/8-bit-mcus/pic-mcus/pic16f15244)
 - [PIC16F152xx Code Examples on GitHub](https://github.com/microchip-pic-avr-examples?q=pic16f15244&type=&language=&sort=) 
 - [PIC16F15244 MCU Family Video](https://www.youtube.com/watch?v=nHLv3Th-o-s)
-- [PIC16F15244 MCU Product Page](https://www.microchip.com/en-us/product/PIC16F15244)
+- [PIC16F15276 MCU Product Page](https://www.microchip.com/en-us/product/PIC16F15276)
 - [GitHub Microchip PIC Example : SPI I/O Expander: Host Implementation using PIC16F15276 microcontroller](https://github.com/microchip-pic-avr-examples/pic16f15276-cnano-spi-io-expander-host-mplab-mcc)
 - [GitHub Microchip PIC Example : UART I/O Expander Host using PIC16F15276 microcontroller](https://github.com/microchip-pic-avr-examples/pic16f15276-cnano-uart-io-expander-host-mplab-mcc)
 
@@ -76,9 +76,10 @@ Note : 330 or 470 ohms resistor will be used.
 ## Software Tools
 
 - [MPLAB® X IDE 6.0.0 or newer](http://www.microchip.com/mplab/mplab-x-ide)
-- [MPLAB® XC8 2.35.0 or a newer compiler](http://www.microchip.com/mplab/compilers)
-- [MPLAB® Code Configurator (MCC) 5.0.3 or newer](https://www.microchip.com/mplab/mplab-code-configurator)
+- [MPLAB® XC8 2.36.0 or a newer compiler](http://www.microchip.com/mplab/compilers)
+- [MPLAB® Code Configurator (MCC) 5.1.1 or newer](https://www.microchip.com/mplab/mplab-code-configurator)
 - MCC Melody Core 2.1.9
+- MSSP MCC Melody driver 6.1.1
 
 **Note:** 
 
