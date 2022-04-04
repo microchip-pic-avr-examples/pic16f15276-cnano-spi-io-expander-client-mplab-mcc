@@ -10,7 +10,7 @@ Refer code example [SPI I/O Expander: Host Implementation using PIC16F15276 micr
 
 ## Introduction
 
-The PIC16F15276 microcontroller is available in 40 pin packages for various embedded applications. The PIC16F15276 family’s simplified feature set includes Peripheral Pin Select (PPS), digital communication peripherals, timers, Enhanced Universal Synchronous Asynchronous Receiver Transmitter (EUSART), Master Synchronous Serial Port(MSSP). This code example demonstrates implementation of I/O Expander using MSSP(SPI mode) peripheral and I/O pins of the PIC16F15276 microcontroller.
+The PIC16F15276 microcontroller is available in 40 pin packages for various embedded applications. The PIC16F152xx family’s simplified feature set includes Peripheral Pin Select (PPS), digital communication peripherals, timers, Enhanced Universal Synchronous Asynchronous Receiver Transmitter (EUSART), Master Synchronous Serial Port(MSSP). This code example demonstrates implementation of I/O Expander using MSSP(SPI mode) peripheral and I/O pins of the PIC16F15276 microcontroller.
 
 The Serial Peripheral Interface (SPI) is a synchronous serial data communication bus that operates in Full-Duplex mode. Devices communicate in a host/client environment where the host device initiates the communication. A client device is selected for communication using the Client Select feature. The SPI bus specifies four signal connections:
 
