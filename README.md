@@ -23,7 +23,7 @@ The SPI bus operates with a single host device and one or more client devices. W
 ## Related Documentation
 
 - [PIC16F152xx Product Family Page](https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/8-bit-mcus/pic-mcus/pic16f15244)
-- [PIC16F152xx Code Examples on GitHub](https://github.com/microchip-pic-avr-examples?q=pic16f15244&type=&language=&sort=) 
+- [PIC16F152xx Code Examples on GitHub](https://github.com/orgs/microchip-pic-avr-examples/repositories?q=pic16f152&type=all&language=&sort=) 
 - [PIC16F15244 MCU Family Video](https://www.youtube.com/watch?v=nHLv3Th-o-s)
 - [PIC16F15276 MCU Product Page](https://www.microchip.com/en-us/product/PIC16F15276)
 - [GitHub Microchip PIC Example : SPI I/O Expander: Host Implementation using PIC16F15276 microcontroller](https://github.com/microchip-pic-avr-examples/pic16f15276-cnano-spi-io-expander-host-mplab-mcc)
