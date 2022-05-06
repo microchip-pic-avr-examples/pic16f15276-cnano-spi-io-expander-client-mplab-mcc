@@ -7,7 +7,7 @@
         "version": "1.0.0",
         "displayName": "SPI I/O Expander using PIC16F15276 microcontroller",
         "projectName": "pic16f15276-cnano-spi-io-expander-client-mplab-mcc",
-        "shortDescription": "This example highlights usage of PIC MCU as I/O expander where the PIC16F15276 MCU acts as client and used as an I/O expander by host and communicates through SPI interface. Compatible PIC16F152xx family of MCUs are PIC16F15244, PIC16F15254, PIC16F15276.",
+        "shortDescription": "This example highlights usage of PIC MCU as I/O expander, where the PIC16F15276 MCU acts as client and used as an I/O expander by host, and communicates through SPI interface. Compatible PIC16F152xx family of MCUs are: PIC16F15244, PIC16F15254, PIC16F15276.",
         "ide": {
             "name": "MPLAB X",
             "semverRange": ">=6.0.0"
@@ -26,7 +26,7 @@
             "name": "MCC",
             "semverRange": "^5.1.1"
         },
-        "device": {
+        "device": {                                                     
             "metaDataVersion": "1.0.0",
             "category": "com.microchip.portal.contentRef",
             "content": {
